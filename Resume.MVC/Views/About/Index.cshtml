@@ -1,0 +1,31 @@
+﻿@using Resume.MVC.Models
+@model List<TblAbout>
+@{
+    ViewBag.Title = "Hakkımda Listesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<table class="table table-primary table-responsive-md table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Resim</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+            {
+        <tr>
+            <td>@item.AboutId</td>
+            <td>@item.ImageUrl</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>
+                <a class="btn btn-danger" href="/About/DeleteAbout/@item.AboutId">Sil</a>
+                <a class="btn btn-success" href="/About/EditAbout/@item.AboutId">Güncelle</a>
+            </td>
+        </tr>
+            }
+</table>
+<a class="btn btn-primary" href="/About/AddAbout">Hakkımda Bilgi Ekleme</a>

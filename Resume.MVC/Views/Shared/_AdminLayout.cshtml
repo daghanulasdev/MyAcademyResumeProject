@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Partial("~/Views/AdminLayout/AdminLayoutHead.cshtml")
+
+<body>
+
+    @Html.Partial("~/Views/AdminLayout/AdminLayoutNavbar.cshtml")
+
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            @Html.Partial("~/Views/AdminLayout/AdminLayoutSideBar.cshtml")
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">@ViewBag.Title</h1>
+                    @RenderBody()
+                    <div style="height: 100vh"></div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    @Html.Partial("~/Views/AdminLayout/AdminLayoutScript.cshtml")
+</body>
+</html>
