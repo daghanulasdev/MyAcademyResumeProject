@@ -1,8 +1,27 @@
-﻿
+﻿@using Resume.MVC.Models
+@model TblExperience
 @{
-    ViewBag.Title = "EditExperience";
+    ViewBag.Title = "Deneyim Duzenleme Sayfasi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>EditExperience</h2>
+<br />
+<form method="post">
+    @Html.Label("AboutId")
+    @Html.TextBoxFor(x => x.ExperienceId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Resim Url")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
 

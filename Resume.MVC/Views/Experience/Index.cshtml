@@ -1,8 +1,33 @@
-﻿
+﻿@using Resume.MVC.Models
+@model List<TblExperience>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Deneyim Listesi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
-
+<br />
+<table class="table table-primary table-responsive-md table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Açıklama</th>
+        <th>Tarih</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ExperienceId</td>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
+            <td>@item.Description</td>
+            <td>@item.Date</td>
+            <td>
+                <a class="btn btn-danger" href="/Experience/DeleteExperience/@item.ExperienceId">Sil</a>
+                <a class="btn btn-success" href="/Experience/EditExperience/@item.ExperienceId">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" href="/Experience/AddExperience">Hakkımda Bilgi Ekleme</a>

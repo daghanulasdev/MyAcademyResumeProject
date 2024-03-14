@@ -1,8 +1,24 @@
-﻿
+﻿@using Resume.MVC.Models
+@model TblFeature
 @{
-    ViewBag.Title = "EditFeature";
+    ViewBag.Title = "One Cikanlar Duzenleme Sayfasi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>EditFeature</h2>
+<br />
+<form method="post">
+    @Html.Label("AboutId")
+    @Html.TextBoxFor(x => x.FeatureId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Resim Url")
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
 

@@ -1,8 +1,33 @@
-﻿
+﻿@using Resume.MVC.Models
+@model List<TblContact>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Iletisim Listesi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
-
+<br />
+<table class="table table-primary table-responsive-md table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Telefon</th>
+        <th>Email</th>
+        <th>Adres</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ContactId</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Phone</td>
+            <td>@item.Email</td>
+            <td>@item.Address</td>
+            <td>
+                <a class="btn btn-danger" href="/Contact/DeleteContact/@item.ContactId">Sil</a>
+                <a class="btn btn-success" href="/Contact/EditContact/@item.ContactId">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" href="/Contact/AddContact">Hakkımda Bilgi Ekleme</a>

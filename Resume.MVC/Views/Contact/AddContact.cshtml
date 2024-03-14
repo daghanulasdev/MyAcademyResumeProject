@@ -1,8 +1,19 @@
 ﻿
 @{
-    ViewBag.Title = "AddContact";
+    ViewBag.Title = "Iletisim Ekleme Sayfası";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>AddContact</h2>
+<br />
+<form method="post">
+    <input type="text" name="NameSurname" class="form-control" placeholder="Ad Soyad Ekleyiniz" />
+    <br />
+    <input type="text" name="Address" class="form-control" placeholder="Adres Ekleyiniz" />
+    <br />
+    <input type="text" name="Phone" class="form-control" placeholder="Telefon Ekleyiniz" />
+    <br />
+    <input type="text" name="Email" class="form-control" placeholder="Mail Adresi Ekleyiniz" />
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
 

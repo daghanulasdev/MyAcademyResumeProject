@@ -1,8 +1,20 @@
 ﻿
 @{
-    ViewBag.Title = "AddExperience";
+    ViewBag.Title = "Deneyim Ekleme Sayfası";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>AddExperience</h2>
+<br />
+<form method="post">
+    <input type="text" name="Title" class="form-control" placeholder="Başlık Ekleyiniz" />
+    <br />
+    <input type="text" name="SubTitle" class="form-control" placeholder="Alt Başlık Ekleyiniz" />
+    <br />
+    <input type="text" name="Description" class="form-control" placeholder="Açıklama Ekleyiniz" />
+    <br />
+    <input type="text" name="Date" class="form-control" placeholder="Tarih Ekleyiniz" />
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
+
 

@@ -1,8 +1,18 @@
 ﻿
 @{
-    ViewBag.Title = "AddFeature";
+    ViewBag.Title = "One Cikanlar Ekleme Sayfası";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>AddFeature</h2>
+<br />
+<form method="post">
+    <input type="text" name="NameSurname" class="form-control" placeholder="Ad Soyad Ekleyiniz" />
+    <br />
+    <input type="text" name="Title" class="form-control" placeholder="Başlık Ekleyiniz" />
+    <br />
+    <input type="text" name="ImageUrl" class="form-control" placeholder="Resim Url Ekleyiniz" />
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
+
 
