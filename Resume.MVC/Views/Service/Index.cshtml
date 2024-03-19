@@ -1,8 +1,31 @@
-﻿
+﻿@using Resume.MVC.Models
+@model List<TblService>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Servislerim Listesi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
-
+<br />
+<table class="table table-primary table-responsive-md table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Baslik</th>
+        <th>Icon Url</th>
+        <th>Aciklama</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ServiceId</td>
+            <td>@item.Title</td>
+            <td>@item.Icon</td>
+            <td>@item.Description</td>
+            <td>
+                <a class="btn btn-danger" href="/Service/DeleteService/@item.ServiceId">Sil</a>
+                <a class="btn btn-success" href="/Service/EditService/@item.ServiceId">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" href="/Service/AddService">Yeni Servis Ekleme</a>

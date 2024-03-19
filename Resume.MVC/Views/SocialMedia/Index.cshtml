@@ -1,8 +1,31 @@
-﻿
+﻿@using Resume.MVC.Models
+@model List<TblSocialMedia>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Sosyal Medya Listesi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
-
+<br />
+<table class="table table-primary table-responsive-md table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Sosyal Medya Ismi</th>
+        <th>Url</th>
+        <th>Icon Url</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SocialMediaId</td>
+            <td>@item.SocialMediaName</td>
+            <td>@item.Url</td>
+            <td>@item.SocialMediaIcon</td>
+            <td>
+                <a class="btn btn-danger" href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaId">Sil</a>
+                <a class="btn btn-success" href="/SocialMedia/EditSocialMedia/@item.SocialMediaId">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" href="/SocialMedia/AddSocialMedia">Sosyal Medya Ekleme</a>

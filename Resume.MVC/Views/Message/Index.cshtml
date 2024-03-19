@@ -1,8 +1,32 @@
-﻿
+﻿@using Resume.MVC.Models
+@model List<TblMessage>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Gelen Mesajlar";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
-
+<br />
+<table class="table table-primary table-responsive-md table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Konu</th>
+        <th>Email</th>
+        <th>Mesaj</th>
+        <th>Islemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MessageId</td>
+            <td>@item.Name</td>
+            <td>@item.Subject</td>
+            <td>@item.Email</td>
+            <td>@item.Message</td>
+            <td>
+                <a class="btn btn-danger" href="/Message/DeleteMessage/@item.MessageId">Sil</a>
+                <a class="btn btn-success" href="/Message/EditMessage/@item.MessageId">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>

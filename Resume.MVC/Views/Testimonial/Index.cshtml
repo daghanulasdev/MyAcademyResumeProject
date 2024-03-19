@@ -1,8 +1,37 @@
-﻿
+﻿@using Resume.MVC.Models
+@model List<TblTestimonial>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Takim Arkadaslarim";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<br />
+<table class="table table-primary table-responsive-md table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Resim Url</th>
+        <th>Unvan</th>
+        <th>Yorum</th>
+        <th>Durum</th>
+        <th>Islemler</th>
 
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TestimonialId</td>
+            <td>@item.CustomerName</td>
+            <td>@item.ImageUrl</td>
+            <td>@item.Title</td>
+            <td>@item.Comment</td>
+            <td>@item.Status</td>
+            <td>
+                <a class="btn btn-danger" href="/Testimonial/DeleteTestimonial/@item.TestimonialId">Sil</a>
+                <a class="btn btn-success" href="/Testimonial/EditTestimonial/@item.TestimonialId">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<a class="btn btn-dark" href="/Testimonial/Index">Geri Don</a>
+<a class="btn btn-primary" href="/Testimonial/AddTestimonial">Takim Arkadasi Ekleme</a>

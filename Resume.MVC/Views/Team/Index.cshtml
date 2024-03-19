@@ -1,8 +1,42 @@
-﻿
+﻿@using Resume.MVC.Models
+@model List<TblTeam>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Takim Arkadaslarim";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
-
+<br />
+<table class="table table-primary table-responsive-md table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Resim Url</th>
+        <th>Unvan</th>
+        <th>Aciklama</th>
+        <th>Twitter Url</th>
+        <th>Linkedin Url</th>
+        <th>Github Url</th>
+        <th>Instagram Url</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TeamId</td>
+            <td>@item.NameSurname</td>
+            <td>@item.ImageUrl</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.TwitterUrl</td>
+            <td>@item.LinkedinUrl</td>
+            <td>@item.GithubUrl</td>
+            <td>@item.InstagramUrl</td>
+            <td>
+                <a class="btn btn-danger" href="/Team/DeleteTeam/@item.TeamId">Sil</a>
+                <a class="btn btn-success" href="/Team/EditTeam/@item.TeamId">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<a class="btn btn-dark" href="/Team/Index">Geri Don</a>
+<a class="btn btn-primary" href="/Team/AddTeam">Takim Arkadasi Ekleme</a>

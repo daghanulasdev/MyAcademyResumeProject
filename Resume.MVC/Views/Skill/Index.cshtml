@@ -1,8 +1,29 @@
-﻿
+﻿@using Resume.MVC.Models
+@model List<TblSkill>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Yeteneklerim";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
-
+<br />
+<table class="table table-primary table-responsive-md table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Yetenek</th>
+        <th>Deger</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SkillId</td>
+            <td>@item.SkillName</td>
+            <td>@item.Value</td>
+            <td>
+                <a class="btn btn-danger" href="/Skill/DeleteSkill/@item.SkillId">Sil</a>
+                <a class="btn btn-success" href="/Skill/EditSkill/@item.SkillId">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" href="/Skill/AddSkill">Yetenek Ekle</a>

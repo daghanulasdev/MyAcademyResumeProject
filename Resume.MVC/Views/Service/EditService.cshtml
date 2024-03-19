@@ -1,8 +1,25 @@
-﻿
+﻿@using Resume.MVC.Models
+@model TblService
 @{
-    ViewBag.Title = "EditService";
+    ViewBag.Title = "Servislerimi Duzenleme Sayfasi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>EditService</h2>
+<br />
+<form method="post">
+    @Html.Label("ServiceId")
+    @Html.TextBoxFor(x => x.ServiceId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Icon Url")
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-dark">Geri Don</button>
+    <button class="btn btn-primary">Kaydet</button>
+</form>
 
