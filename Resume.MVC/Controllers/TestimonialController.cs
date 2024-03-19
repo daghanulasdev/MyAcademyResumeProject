@@ -52,6 +52,7 @@ namespace Resume.MVC.Controllers
             t.Title = p.Title;
             t.CustomerName = p.CustomerName;
             t.Comment = p.Comment;
+            t.Status = p.Status;
             testimonialRepository.TUpdate(t);
             return RedirectToAction("Index");
 

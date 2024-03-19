@@ -16,16 +16,18 @@
     @Html.Label("Referans Ismi")
     @Html.TextBoxFor(x => x.CustomerName, new { @class = "form-control" })
     <br />
-    @Html.Label("Yorum")
-    @Html.TextBoxFor(x => x.Comment, new { @class = "form-control", @readonly = "readonly" })
-    <br />
     @Html.Label("Unvan")
     @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
     <br />
-    <select name="Status" class="form-control">
-        <option value="True">Aktif</option>
-        <option value="False">Pasif</option>
-    </select>
+    @Html.Label("Yorum")
+    @Html.TextBoxFor(x => x.Comment, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(model => model.Status)
+    @Html.DropDownListFor(model => model.Status, new SelectList(new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Aktif", Value = "True" },
+        new SelectListItem { Text = "Pasif", Value = "False" }
+    }, "Value", "Text"), new { @class = "form-control" })
     <br />
     <button class="btn btn-primary">Kaydet</button>
 </form>
