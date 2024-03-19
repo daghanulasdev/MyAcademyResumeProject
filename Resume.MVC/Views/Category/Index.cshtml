@@ -1,0 +1,27 @@
+﻿@using Resume.MVC.Models
+@model List<TblCategory>
+@{
+    ViewBag.Title = "Kategoriler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<table class="table table-primary table-responsive-md table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kategori Adi</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryId</td>
+            <td>@item.CategoryName</td>
+            <td>
+                <a class="btn btn-danger" href="/Category/DeleteCategory/@item.CategoryId">Sil</a>
+                <a class="btn btn-success" href="/Category/EditCategory/@item.CategoryId">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" href="/Category/AddCategory">Hakkımda Bilgi Ekleme</a>

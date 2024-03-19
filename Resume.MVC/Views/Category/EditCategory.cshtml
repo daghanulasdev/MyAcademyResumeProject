@@ -1,0 +1,19 @@
+﻿@using Resume.MVC.Models
+@model TblCategory
+@{
+    ViewBag.Title = "Kategori Duzenleme Sayfasi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form method="post">
+    @Html.Label("CategoryId")
+    @Html.TextBoxFor(x => x.CategoryId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Kategori Adi")
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    <br />
+    <a class="btn btn-dark" href="/Category/Index">Geri Don</a>
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+

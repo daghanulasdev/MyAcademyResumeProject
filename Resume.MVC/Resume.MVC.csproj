@@ -336,10 +336,12 @@
     <Content Include="Views\Testimonial\EditTestimonial.cshtml" />
     <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
     <Content Include="Views\Testimonial\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\AddCategory.cshtml" />
+    <Content Include="Views\Category\EditCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Category\" />
     <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
