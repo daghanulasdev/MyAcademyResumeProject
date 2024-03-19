@@ -1,8 +1,40 @@
-﻿
+﻿@using Resume.MVC.Models
+@model TblTeam
 @{
-    ViewBag.Title = "EditTeam";
+    ViewBag.Title = "Takim Arkadaslari Duzenleme Sayfasi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>EditTeam</h2>
-
+<br />
+<form method="post">
+    @Html.Label("TeamId")
+    @Html.TextBoxFor(x => x.TeamId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Resim Url")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ad Soyad")
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    @Html.Label("Unvan")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Twitter Linki")
+    @Html.TextBoxFor(x => x.TwitterUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Linkedin Linki")
+    @Html.TextBoxFor(x => x.LinkedinUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Github Linki")
+    @Html.TextBoxFor(x => x.GithubUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Instagram Linki")
+    @Html.TextBoxFor(x => x.InstagramUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+<br />
+<a class="btn btn-dark" href="/Team/Index">Geri Don</a>

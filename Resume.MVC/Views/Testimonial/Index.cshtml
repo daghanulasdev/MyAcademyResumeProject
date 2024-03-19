@@ -1,7 +1,7 @@
 ﻿@using Resume.MVC.Models
 @model List<TblTestimonial>
 @{
-    ViewBag.Title = "Takim Arkadaslarim";
+    ViewBag.Title = "Referanslarim";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -25,9 +25,7 @@
             <td>@item.ImageUrl</td>
             <td>@item.Title</td>
             <td>@item.Comment</td>
-            <td>
             <td>@(item.Status.HasValue ? (item.Status.Value ? "Aktif" : "Pasif") : "Durum Belirtilmedi")</td>
-            </td>
             <td>
                 <a class="btn btn-danger" href="/Testimonial/DeleteTestimonial/@item.TestimonialId">Sil</a>
                 <a class="btn btn-success" href="/Testimonial/EditTestimonial/@item.TestimonialId">Güncelle</a>

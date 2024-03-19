@@ -1,8 +1,26 @@
-﻿
+﻿@using Resume.MVC.Models
+@model TblSocialMedia
 @{
-    ViewBag.Title = "EditSocialMedia";
+    ViewBag.Title = "Sosyal Medya Duzenleme Sayfasi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>EditSocialMedia</h2>
+<br />
+<form method="post">
+    @Html.Label("SocialMediaId")
+    @Html.TextBoxFor(x => x.SocialMediaId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Sosyal Medya Adi")
+    @Html.TextBoxFor(x => x.SocialMediaName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sosyal Medya Linki")
+    @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sosyal Medya Icon Url")
+    @Html.TextBoxFor(x => x.SocialMediaIcon, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+<br />
+<a class="btn btn-dark" href="/SocialMedia/Index">Geri Don</a>
 

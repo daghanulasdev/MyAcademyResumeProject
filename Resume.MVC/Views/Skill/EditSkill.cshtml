@@ -1,8 +1,23 @@
-﻿
+﻿@using Resume.MVC.Models
+@model TblSkill
 @{
-    ViewBag.Title = "EditSkill";
+    ViewBag.Title = "Hakkimda Duzenleme Sayfasi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>EditSkill</h2>
+<br />
+<form method="post">
+    @Html.Label("SkillId")
+    @Html.TextBoxFor(x => x.SkillId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Yetenek")
+    @Html.TextBoxFor(x => x.SkillName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Deger")
+    @Html.TextBoxFor(x => x.Value, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+<br />
+<a class="btn btn-dark" href="/Skill/Index">Geri Don</a>
 
