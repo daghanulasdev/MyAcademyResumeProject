@@ -1,8 +1,19 @@
-﻿
+﻿@model Resume.MVC.Models.TblSocialMedia
 @{
-    ViewBag.Title = "AddSocialMedia";
+    ViewBag.Title = "Sosyal Medya Ekleme Sayfası";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>AddSocialMedia</h2>
+<br />
+<form method="post">
+    <input type="text" name="SocialMediaName" class="form-control" placeholder="Sosyal Medya Ekleyiniz" />
+    <br />
+    <input type="text" name="Url" class="form-control" placeholder="Link Ekleyiniz" />
+    <br />
+    <input type="text" name="SocialMediaIcon" class="form-control" placeholder="Sosyal Medya IkonUrl Ekleyiniz" />
+    <br />
+    <button class="btn btn-dark">Geri Don</button>
+    <button class="btn btn-info">Ekle</button>
+</form>
+
 

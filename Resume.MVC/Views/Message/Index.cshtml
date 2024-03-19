@@ -12,7 +12,7 @@
         <th>Ad Soyad</th>
         <th>Konu</th>
         <th>Email</th>
-        <th>Mesaj</th>
+        <th>Gelen Mesaj</th>
         <th>Islemler</th>
     </tr>
     @foreach (var item in Model)
@@ -25,7 +25,6 @@
             <td>@item.Message</td>
             <td>
                 <a class="btn btn-danger" href="/Message/DeleteMessage/@item.MessageId">Sil</a>
-                <a class="btn btn-success" href="/Message/EditMessage/@item.MessageId">Güncelle</a>
             </td>
         </tr>
     }

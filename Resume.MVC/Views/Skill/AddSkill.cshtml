@@ -1,8 +1,17 @@
-﻿
+﻿@model Resume.MVC.Models.TblSkill
 @{
-    ViewBag.Title = "AddSkill";
+    ViewBag.Title = "Yetenek Ekleme Sayfası";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>AddSkill</h2>
+<br />
+<form method="post">
+    <input type="text" name="SkillName" class="form-control" placeholder="Yetenek Ekleyiniz" />
+    <br />
+    <input type="text" name="Value" class="form-control" placeholder="Deger Ekleyiniz" />
+    <br />
+    <button class="btn btn-dark">Geri Don</button>
+    <button class="btn btn-info">Ekle</button>
+</form>
+
 

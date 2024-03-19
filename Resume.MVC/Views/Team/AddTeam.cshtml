@@ -1,8 +1,29 @@
-﻿
+﻿@model Resume.MVC.Models.TblTeam
 @{
-    ViewBag.Title = "AddTeam";
+    ViewBag.Title = "Takim Arkadasi Ekleme Sayfası";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>AddTeam</h2>
+<br />
+<form method="post">
+    <input type="text" name="NameSurname" class="form-control" placeholder="Ad Soyad Ekleyiniz" />
+    <br />
+    <input type="text" name="ImageUrl" class="form-control" placeholder="Resim Url Ekleyiniz" />
+    <br />
+    <input type="text" name="Title" class="form-control" placeholder="Unvan Ekleyiniz" />
+    <br />
+    <input type="text" name="Description" class="form-control" placeholder="Açıklama Ekleyiniz" />
+    <br />
+    <input type="text" name="TwitterUrl" class="form-control" placeholder="Twitter Linki Ekleyiniz" />
+    <br />
+    <input type="text" name="LinkedinUrl" class="form-control" placeholder="Linkedin Linki Ekleyiniz" />
+    <br />
+    <input type="text" name="GithubUrl" class="form-control" placeholder="Github Linki Ekleyiniz" />
+    <br />
+    <input type="text" name="InstagramUrl" class="form-control" placeholder="Instagram Linki Ekleyiniz" />
+    <br />
+    <button class="btn btn-dark">Geri Don</button>
+    <button class="btn btn-info">Ekle</button>
+</form>
+
 
