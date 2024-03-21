@@ -41,6 +41,11 @@ namespace Resume.MVC.Controllers
             var values = db.TblExperience.ToList();
             return PartialView(values);
         }
+        public PartialViewResult Category()
+        {
+            var values = db.TblCategory.ToList();
+            return PartialView(values);
+        }
         public PartialViewResult Project()
         {
             var values = db.TblProject.ToList();
@@ -68,5 +73,6 @@ namespace Resume.MVC.Controllers
             db.SaveChanges();
             return PartialView();
         } 
+        
     }
 }

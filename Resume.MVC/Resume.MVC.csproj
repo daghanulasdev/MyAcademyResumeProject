@@ -417,6 +417,7 @@
     <Content Include="Views\Default\Team.cshtml" />
     <Content Include="Views\Default\Message.cshtml" />
     <Content Include="Views\Default\Skill.cshtml" />
+    <Content Include="Views\Default\Category.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
