@@ -31,6 +31,7 @@ namespace Resume.MVC.Models
         public virtual DbSet<TblContact> TblContact { get; set; }
         public virtual DbSet<TblExperience> TblExperience { get; set; }
         public virtual DbSet<TblFeature> TblFeature { get; set; }
+        public virtual DbSet<TblLogin> TblLogin { get; set; }
         public virtual DbSet<TblMessage> TblMessage { get; set; }
         public virtual DbSet<TblProject> TblProject { get; set; }
         public virtual DbSet<TblService> TblService { get; set; }

@@ -9,6 +9,10 @@ namespace Resume.MVC.Controllers
     public class AdminLayoutController : Controller
     {
         // GET: AdminLayout
+        public ActionResult Index()
+        {
+            return View();
+        }
         public PartialViewResult AdminLayoutSideBar()
         {
             return PartialView();

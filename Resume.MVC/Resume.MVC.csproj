@@ -136,6 +136,7 @@
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
@@ -177,6 +178,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblFeature.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblLogin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblMessage.cs">
@@ -232,13 +236,69 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="devfolio2-main\css\style.css" />
+    <Content Include="devfolio2-main\developer-portfolio-template.jpg" />
+    <Content Include="devfolio2-main\img\about.jpg" />
+    <Content Include="devfolio2-main\img\blog-1.jpg" />
+    <Content Include="devfolio2-main\img\blog-2.jpg" />
+    <Content Include="devfolio2-main\img\contact.jpg" />
+    <Content Include="devfolio2-main\img\hero-bg.jpg" />
+    <Content Include="devfolio2-main\img\hero.png" />
+    <Content Include="devfolio2-main\img\portfolio-1.jpg" />
+    <Content Include="devfolio2-main\img\portfolio-2.jpg" />
+    <Content Include="devfolio2-main\img\portfolio-3.jpg" />
+    <Content Include="devfolio2-main\img\portfolio-4.jpg" />
+    <Content Include="devfolio2-main\img\portfolio-5.jpg" />
+    <Content Include="devfolio2-main\img\portfolio-6.jpg" />
+    <Content Include="devfolio2-main\img\team-1.jpg" />
+    <Content Include="devfolio2-main\img\team-2.jpg" />
+    <Content Include="devfolio2-main\img\team-3.jpg" />
+    <Content Include="devfolio2-main\img\team-4.jpg" />
+    <Content Include="devfolio2-main\img\testimonial-1.jpg" />
+    <Content Include="devfolio2-main\img\testimonial-2.jpg" />
+    <Content Include="devfolio2-main\img\testimonial-3.jpg" />
+    <Content Include="devfolio2-main\index.html" />
+    <Content Include="devfolio2-main\js\main.js" />
+    <Content Include="devfolio2-main\lib\animate\animate.css" />
+    <Content Include="devfolio2-main\lib\animate\animate.min.css" />
+    <Content Include="devfolio2-main\lib\easing\easing.js" />
+    <Content Include="devfolio2-main\lib\easing\easing.min.js" />
+    <Content Include="devfolio2-main\lib\isotope\isotope.pkgd.js" />
+    <Content Include="devfolio2-main\lib\isotope\isotope.pkgd.min.js" />
+    <Content Include="devfolio2-main\lib\lightbox\css\lightbox.css" />
+    <Content Include="devfolio2-main\lib\lightbox\css\lightbox.min.css" />
+    <Content Include="devfolio2-main\lib\lightbox\images\close.png" />
+    <Content Include="devfolio2-main\lib\lightbox\images\loading.gif" />
+    <Content Include="devfolio2-main\lib\lightbox\images\next.png" />
+    <Content Include="devfolio2-main\lib\lightbox\images\prev.png" />
+    <Content Include="devfolio2-main\lib\lightbox\js\lightbox.js" />
+    <Content Include="devfolio2-main\lib\lightbox\js\lightbox.min.js" />
+    <Content Include="devfolio2-main\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="devfolio2-main\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="devfolio2-main\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="devfolio2-main\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="devfolio2-main\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="devfolio2-main\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="devfolio2-main\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="devfolio2-main\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="devfolio2-main\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="devfolio2-main\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="devfolio2-main\lib\typed\typed.js" />
+    <Content Include="devfolio2-main\lib\typed\typed.min.js" />
+    <Content Include="devfolio2-main\lib\waypoints\waypoints.min.js" />
+    <Content Include="devfolio2-main\lib\wow\wow.js" />
+    <Content Include="devfolio2-main\lib\wow\wow.min.js" />
+    <Content Include="devfolio2-main\LICENSE.txt" />
+    <Content Include="devfolio2-main\mail\contact.js" />
+    <Content Include="devfolio2-main\mail\jqBootstrapValidation.min.js" />
+    <Content Include="devfolio2-main\READ-ME.txt" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -277,6 +337,10 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="devfolio2-main\lib\lightbox\links.php" />
+    <Content Include="devfolio2-main\lib\owlcarousel\LICENSE" />
+    <Content Include="devfolio2-main\lib\waypoints\links.php" />
+    <Content Include="devfolio2-main\mail\contact.php" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -341,10 +405,22 @@
     <Content Include="Views\Category\EditCategory.cshtml" />
     <Content Include="Views\Project\AddProject.cshtml" />
     <Content Include="Views\Project\EditProject.cshtml" />
+    <Content Include="Views\AdminLayout\Index.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Shared\_DefaultLayout.cshtml" />
+    <Content Include="Views\Default\Feature.cshtml" />
+    <Content Include="Views\Default\About.cshtml" />
+    <Content Include="Views\Default\Service.cshtml" />
+    <Content Include="Views\Default\Experience.cshtml" />
+    <Content Include="Views\Default\Project.cshtml" />
+    <Content Include="Views\Default\Testimonial.cshtml" />
+    <Content Include="Views\Default\Team.cshtml" />
+    <Content Include="Views\Default\Message.cshtml" />
+    <Content Include="Views\Default\Skill.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Default\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
