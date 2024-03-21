@@ -1,0 +1,21 @@
+﻿@model Resume.MVC.Models.TblProject
+@{
+    ViewBag.Title = "Proje Ekleme Sayfası";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form method="post">
+    <input type="text" name="ImageUrl" class="form-control" placeholder="Resim Url Ekleyiniz" />
+    <br />
+    <input type="text" name="ProjectName" class="form-control" placeholder="Proje Ismini Ekleyiniz" />
+    <br />
+    <input type="text" name="ProjectUrl" class="form-control" placeholder="Yorum Ekleyiniz" />
+    <br />
+    <label>Kategori</label>
+    @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.category, new {@class="form-control"})
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
+<br />
+<a class="btn btn-dark" href="/Project/Index">Geri Don</a>

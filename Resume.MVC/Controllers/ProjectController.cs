@@ -12,6 +12,7 @@ namespace Resume.MVC.Controllers
     {
         // GET: Project
         ProjectRepository projectRepository = new ProjectRepository();
+        CategoryRepository categoryRepository = new CategoryRepository();
         public ActionResult Index()
         {
             var values = projectRepository.GetList();
@@ -21,6 +22,14 @@ namespace Resume.MVC.Controllers
         [HttpGet]
         public ActionResult AddProject()
         {
+            var categories = categoryRepository.GetList();
+            List<SelectListItem> categoryList = (from x in categories
+                                                 select new SelectListItem
+                                                 {
+                                                     Text = x.CategoryName,
+                                                     Value = x.CategoryId.ToString()
+                                                 }).ToList();
+            ViewBag.category = categoryList;
             return View();
         }
         [HttpPost]
@@ -40,6 +49,14 @@ namespace Resume.MVC.Controllers
         [HttpGet]
         public ActionResult EditProject(int id)
         {
+            var categories = categoryRepository.GetList();
+            List<SelectListItem> categoryList = (from x in categories
+                                                 select new SelectListItem
+                                                 {
+                                                     Text = x.CategoryName,
+                                                     Value = x.CategoryId.ToString()
+                                                 }).ToList();
+            ViewBag.category = categoryList;
             TblProject t = projectRepository.Find(x => x.ProjectId == id);
             return View(t);
         }
@@ -51,6 +68,7 @@ namespace Resume.MVC.Controllers
             t.ImageUrl = p.ImageUrl;
             t.ProjectName = p.ProjectName;
             t.ProjectUrl = p.ProjectUrl;
+            t.CategoryId = p.CategoryId;
             projectRepository.TUpdate(t);
             return RedirectToAction("Index");
 

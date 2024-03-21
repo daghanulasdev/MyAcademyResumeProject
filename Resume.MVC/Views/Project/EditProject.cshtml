@@ -1,0 +1,25 @@
+﻿@model Resume.MVC.Models.TblProject
+@{
+    ViewBag.Title = "Proje Bilgisi Guncelleme Sayfasi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<form method="post">
+    @Html.Label("ProjectId")
+    @Html.TextBoxFor(x => x.ProjectId, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Resim Url")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Proje Ismi")
+    @Html.TextBoxFor(x => x.ProjectName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Proje Linki")
+    @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "form-control" })
+    <br />
+    <label>Kategori</label>
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.category, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+<br />
+<a class="btn btn-dark" href="/Project/Index">Geri Don</a>

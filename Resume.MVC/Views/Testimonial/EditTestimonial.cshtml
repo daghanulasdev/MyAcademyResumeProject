@@ -20,7 +20,7 @@
     @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
     <br />
     @Html.Label("Yorum")
-    @Html.TextBoxFor(x => x.Comment, new { @class = "form-control", @readonly = "readonly" })
+    @Html.TextBoxFor(x => x.Comment, new { @class = "form-control" })
     <br />
     @Html.LabelFor(model => model.Status)
     @Html.DropDownListFor(model => model.Status, new SelectList(new List<SelectListItem>

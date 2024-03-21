@@ -1,7 +1,7 @@
 ﻿@using Resume.MVC.Models
 @model TblContact
 @{
-    ViewBag.Title = "Iletisim Duzenleme Sayfasi";
+    ViewBag.Title = "Iletisim Bilgisi Duzenleme Sayfasi";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -22,6 +22,7 @@
     @Html.Label("Mail")
     @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
     <br />
-    <a class="btn btn-dark" href="/Contact/Index">Geri Don</a>
     <button class="btn btn-primary">Kaydet</button>
 </form>
+<br />
+<a class="btn btn-dark" href="/Contact/Index">Geri Don</a>
