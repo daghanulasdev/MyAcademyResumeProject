@@ -420,10 +420,10 @@
     <Content Include="Views\Default\Category.cshtml" />
     <Content Include="Views\Default\Contact.cshtml" />
     <Content Include="Views\Default\SocialMedia.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

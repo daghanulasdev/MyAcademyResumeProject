@@ -7,9 +7,10 @@ using System.Web.Mvc;
 
 namespace Resume.MVC.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
-        //[AllowAnonymous]
+        
         // GET: Default
         MyAcademyDbEntities db = new MyAcademyDbEntities();
         public ActionResult Index()

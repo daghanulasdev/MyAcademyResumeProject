@@ -8,6 +8,7 @@ using System.Web.Security;
 
 namespace Resume.MVC.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         //GET: Login
@@ -25,7 +26,7 @@ namespace Resume.MVC.Controllers
             {
                 FormsAuthentication.SetAuthCookie(userinfo.Username, false);
                 Session["UserName"] = userinfo.Username.ToString();
-                return RedirectToAction("Index", "Admin");
+                return RedirectToAction("Index", "AdminLayout");
             }
             else
             {

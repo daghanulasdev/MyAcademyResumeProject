@@ -3,10 +3,11 @@
 <div class="row">
     <div class="col-12">
         <ul id="portfolio-filter">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-1">Web Design</li>
-            <li data-filter=".filter-2">Mobile Apps</li>
-            <li data-filter=".filter-3">Game Dev</li>
+            <li data-filter="*" class="filter-active">Tümü</li>
+            @foreach (var item in Model)
+            {
+                <li data-filter=".filter-1">@item.CategoryName</li>
+            }
         </ul>
     </div>
 </div>
