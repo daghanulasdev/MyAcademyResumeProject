@@ -418,6 +418,8 @@
     <Content Include="Views\Default\Message.cshtml" />
     <Content Include="Views\Default\Skill.cshtml" />
     <Content Include="Views\Default\Category.cshtml" />
+    <Content Include="Views\Default\Contact.cshtml" />
+    <Content Include="Views\Default\SocialMedia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

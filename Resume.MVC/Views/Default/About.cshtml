@@ -3,26 +3,31 @@
 <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
     <div class="container-fluid">
         <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="about-img">
-                    <img src="img/about.jpg" alt="Image">
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="about-content">
-                    <div class="section-header text-left">
-                        <p>Learn About Me</p>
-                        <h2>10 Years Experience</h2>
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="@item.ImageUrl" alt="Image">
                     </div>
-                    <div class="about-text">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida
-                        </p>
-                    </div>
-                    @Html.Action("Skill")
-                    <a class="btn" href="">Learn More</a>
                 </div>
-            </div>
+                <div class="col-lg-6">
+
+                    <div class="about-content">
+                        <div class="section-header text-left">
+                            <p>Hakkımda Daha Fazla Öğren</p>
+                            <h2>@item.Title</h2>
+                        </div>
+                        <div class="about-text">
+                            <p>
+                                @item.Description
+                            </p>
+                        </div>
+                        @Html.Action("Skill")
+                        <a class="btn" href="">Learn More</a>
+                    </div>
+
+                </div>
+            }
         </div>
     </div>
 </div>

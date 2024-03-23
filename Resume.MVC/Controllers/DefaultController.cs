@@ -72,7 +72,17 @@ namespace Resume.MVC.Controllers
             db.TblMessage.Add(m);
             db.SaveChanges();
             return PartialView();
-        } 
+        }
+        public PartialViewResult Contact()
+        {
+            var values = db.TblContact.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult SocialMedia()
+        {
+            var values = db.TblSocialMedia.ToList();
+            return PartialView(values);
+        }
         
     }
 }

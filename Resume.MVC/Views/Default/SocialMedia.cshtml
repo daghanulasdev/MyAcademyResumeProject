@@ -1,0 +1,9 @@
+﻿@using Resume.MVC.Models
+@model List<TblSocialMedia>
+
+<div class="footer-social">
+    @foreach (var item in Model)
+    {
+        <a href="@item.Url" target="_blank"><i class="@item.SocialMediaIcon"></i></a>
+    }
+</div>
