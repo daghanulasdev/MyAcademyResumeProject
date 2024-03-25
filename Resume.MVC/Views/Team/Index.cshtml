@@ -9,8 +9,8 @@
 <table class="table table-primary table-responsive-md table-bordered">
     <tr>
         <th>#</th>
+        <th>Resim</th>
         <th>Ad Soyad</th>
-        <th>Resim Url</th>
         <th>Unvan</th>
         <th>Aciklama</th>
         <th>Twitter Url</th>
@@ -23,8 +23,8 @@
     {
         <tr>
             <td>@item.TeamId</td>
-            <td>@item.NameSurname</td>
-            <td>@item.ImageUrl</td>
+            <td><img src="@item.ImageUrl" style="height:50px; width:50px;" /></td>
+            <td>@item.NameSurname</td> 
             <td>@item.Title</td>
             <td>@item.Description</td>
             <td>@item.TwitterUrl</td>

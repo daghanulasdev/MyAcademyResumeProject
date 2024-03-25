@@ -133,6 +133,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\DefaultLayoutController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -421,6 +422,9 @@
     <Content Include="Views\Default\Contact.cshtml" />
     <Content Include="Views\Default\SocialMedia.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\DefaultLayout\DefaultLayoutHead.cshtml" />
+    <Content Include="Views\DefaultLayout\DefaultLayoutNavbar.cshtml" />
+    <Content Include="Views\DefaultLayout\DefaultLayoutScript.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
