@@ -12,6 +12,7 @@
         <th>Baslik</th>
         <th>Icon Url</th>
         <th>Aciklama</th>
+        <th>Durum</th>
         <th>İşlemler</th>
     </tr>
     @foreach (var item in Model)
@@ -21,6 +22,20 @@
             <td>@item.Title</td>
             <td>@item.Icon</td>
             <td>@item.Description</td>
+            <td>
+                @if (item.Status.HasValue)
+                {
+                    if (item.Status.Value)
+                    {
+                        <span style="color: green;">Aktif</span>
+                    }
+                    else
+                    {
+                        <span style="color: red;">Pasif</span>
+                    }
+                }
+
+            </td>
             <td>
                 <a class="btn btn-danger" href="/Service/DeleteService/@item.ServiceId">Sil</a>
                 <a class="btn btn-success" href="/Service/EditService/@item.ServiceId">Güncelle</a>

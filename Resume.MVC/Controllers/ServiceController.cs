@@ -51,6 +51,7 @@ namespace Resume.MVC.Controllers
             t.Icon = p.Icon;
             t.Title = p.Title;
             t.Description = p.Description;
+            t.Status = p.Status;
             serviceRepository.TUpdate(t);
             return RedirectToAction("Index");
 

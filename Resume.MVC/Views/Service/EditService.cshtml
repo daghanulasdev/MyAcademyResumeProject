@@ -19,6 +19,13 @@
     @Html.Label("Açıklama")
     @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
     <br />
+    @Html.LabelFor(model => model.Status)
+    @Html.DropDownListFor(model => model.Status, new SelectList(new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Aktif", Value = "True" },
+        new SelectListItem { Text = "Pasif", Value = "False" }
+    }, "Value", "Text"), new { @class = "form-control" })
+    <br />
     <button class="btn btn-primary">Kaydet</button>
 </form>
 <br />

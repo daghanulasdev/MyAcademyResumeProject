@@ -34,7 +34,7 @@ namespace Resume.MVC.Controllers
         }
         public PartialViewResult Service()
         {
-            var values = db.TblService.ToList();
+            var values = db.TblService.Where(x=>x.Status==true).ToList();
             return PartialView(values);
         }
         public PartialViewResult Experience()
@@ -54,7 +54,7 @@ namespace Resume.MVC.Controllers
         }
         public PartialViewResult Testimonial()
         {
-            var values = db.TblTestimonial.ToList();
+            var values = db.TblTestimonial.Where(x=>x.Status==true).ToList();
             return PartialView(values);
         }
         public PartialViewResult Team()
@@ -68,7 +68,7 @@ namespace Resume.MVC.Controllers
             return PartialView();
         }
         [HttpPost]
-        public PartialViewResult Message(TblMessage m)
+        public ActionResult Message(TblMessage m)
         {
             db.TblMessage.Add(m);
             db.SaveChanges();
